@@ -25,7 +25,7 @@ defmodule PentoWeb.WrongLive do
       <br />
 
       <%= if @won do %>
-        <.link phx-click="restart" class="btn btn-primary inline-block font-bold">
+        <.link phx-click="restart" class="btn btn-primary">
           Play Again
         </.link>
       <% else %>
@@ -41,6 +41,7 @@ defmodule PentoWeb.WrongLive do
           <% end %>
         </h2>
       <% end %>
+      <br />
       <h2>
         It's {@time}
       </h2>
