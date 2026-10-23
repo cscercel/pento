@@ -2,6 +2,9 @@ defmodule PentoWeb.WrongLive do
   use PentoWeb, :live_view
 
   def mount(_params, _session, socket) do
+    # current_scope is automatically available thanks to on_mount callback
+    user = socket.assigns.current_scope.user
+
     {
       :ok,
       assign(
@@ -10,7 +13,8 @@ defmodule PentoWeb.WrongLive do
         message: "make a guess:",
         won: false,
         time: time(),
-        answer: Enum.random(1..10)
+        answer: Enum.random(1..10),
+        current_user: user
       )
     }
   end
