@@ -49,6 +49,9 @@ defmodule PentoWeb.WrongLive do
       <h2>
         It's {@time}
       </h2>
+      <h2>
+        {@current_user.email}
+      </h2>
     </main>
     """
   end
